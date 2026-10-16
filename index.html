@@ -30,6 +30,14 @@
 #obiective .panel h3{color:#273749}
 #obiective .panel p{color:#4c514f;line-height:1.75;font-size:15px}
 #obiective .panel .num{color:#96714c}
+
+/* Metodologie: distribuție echilibrată a celor cinci repere, 3 + 2 centrate */
+#metodologie .steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+#metodologie .step{grid-column:span 2;min-width:0}
+#metodologie .step:nth-child(4){grid-column:2 / span 2}
+#metodologie .step:nth-child(5){grid-column:4 / span 2}
+@media(max-width:850px){#metodologie .steps{grid-template-columns:repeat(2,minmax(0,1fr))}#metodologie .step,#metodologie .step:nth-child(4),#metodologie .step:nth-child(5){grid-column:auto}#metodologie .step:last-child{grid-column:1 / -1;max-width:calc(50% - 9px);width:100%;justify-self:center}}
+@media(max-width:560px){#metodologie .steps{grid-template-columns:1fr}#metodologie .step,#metodologie .step:nth-child(4),#metodologie .step:nth-child(5),#metodologie .step:last-child{grid-column:1;max-width:none;width:auto}}
 </style><style>
 /* REIMAGINED DESIGN — Editorial / academic / congress */
 :root{--navy:#172b35;--navy2:#10212b;--gold:#9d7b4c;--cream:#f3f0e8;--ink:#202d30;--muted:#69706e;--line:#dcd6c9;--serif:'Iowan Old Style','Baskerville','Palatino Linotype',Georgia,serif}
