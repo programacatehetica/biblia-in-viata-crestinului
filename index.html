@@ -183,6 +183,21 @@ html{scroll-behavior:smooth}body{background:var(--cream);color:var(--ink);font-f
 
 /* Hero fără exploratorul biblic: compoziție editorială pe toată lățimea */
 .hero-shell{display:block;min-height:0;max-width:1180px;margin:0 auto}.hero-copy{max-width:1100px;margin:auto;padding:clamp(64px,7vw,115px) clamp(28px,6vw,92px) clamp(90px,9vw,135px)}.hero{min-height:0}.hero-scroll{pointer-events:none}
+
+/* Copertă de congres: compoziție axială, centrată și aerisită */
+#acasa .hero-shell{max-width:1200px;margin:0 auto;display:block;min-height:0}
+#acasa .hero-copy{max-width:1080px;margin:0 auto;padding:clamp(65px,7vw,110px) clamp(24px,5vw,70px) clamp(78px,8vw,115px);text-align:center;display:flex;flex-direction:column;align-items:center}
+#acasa .hero-overline{justify-content:center;white-space:normal;text-align:center;line-height:1.7;gap:13px;letter-spacing:.17em}
+#acasa .hero-index{margin:clamp(42px,5vw,70px) 0 21px;letter-spacing:.24em}
+#acasa h1{max-width:900px;margin:0 auto clamp(36px,4vw,54px);font-size:clamp(58px,8vw,116px);line-height:1.04;letter-spacing:-.06em;text-wrap:balance}
+#acasa .hero-credit{width:min(100%,760px);margin:0 auto 34px;padding:22px 32px;border-top:1px solid #cfc4b0;border-bottom:1px solid #cfc4b0;text-align:center}
+#acasa .hero-credit-row{justify-content:center;flex-wrap:wrap;column-gap:9px;line-height:1.65}
+#acasa .hero-bottom{width:min(100%,780px);max-width:780px;border-top:0;padding-top:0;margin:0 auto}
+#acasa .hero-statement{max-width:760px;margin:0 auto;font-size:clamp(17px,1.65vw,22px);line-height:1.65;text-wrap:pretty}
+#acasa .hero-actions{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:35px;flex-wrap:wrap}
+#acasa .hero-actions .btn{min-height:47px;display:inline-flex;align-items:center;justify-content:center}
+#acasa .hero-scroll{max-width:1200px;margin:auto}
+@media(max-width:650px){#acasa .hero-copy{padding:55px 22px 76px}#acasa .hero-index{margin:38px 0 20px}#acasa h1{font-size:clamp(48px,12vw,72px);margin-bottom:34px}#acasa .hero-credit{padding:20px 8px;margin-bottom:28px}#acasa .hero-credit-row{display:block}#acasa .hero-credit-label{display:block}#acasa .hero-actions{flex-direction:column}#acasa .hero-actions .btn{width:min(100%,320px)}}
 </style></head><body>
 <header class="top"><a class="brand" href="#acasa"><span aria-hidden="true" class="brandmark">✦</span><span class="brandname">Arhiepiscopia Vadului,<br/>Feleacului și Clujului</span></a><nav class="nav"><a href="#proiect">Proiectul</a><a href="#obiective">Obiective</a><a href="#metodologie">Metodologie</a><a href="#tematica">Tematică</a><a href="#resurse">Resurse</a></nav><button class="btn btn-dark" id="startPresentation">◈ Mod congres</button></header>
 <main><section class="hero" id="acasa"><div class="hero-shell"><div class="hero-copy"><div class="hero-overline"><span class="archdiocese-mark" aria-hidden="true">✦</span><span class="archdiocese-name">ARHIEPISCOPIA VADULUI, FELEACULUI ȘI CLUJULUI</span></div><p class="hero-index">PROGRAM BIBLIC–CATEHETIC <span> / 01</span></p><h1>Biblia <em>în viața</em><br/>creștinului<br/><i>de azi</i></h1><div class="hero-credit" aria-label="Coordonarea proiectului"><div class="hero-credit-row"><span class="hero-credit-label">Inițiator și coordonator științific:</span> <strong>Pr. Prof. Univ. Dr. Stelian Tofană</strong></div><div class="hero-credit-row"><span class="hero-credit-label">Coordonare organizatorică:</span> <strong>Pr. Dr. Raul Pap – inspector eparhial</strong></div></div><div class="hero-bottom"><p class="hero-statement">Program biblic-catehetic desfășurat cu binecuvântarea <em>Înaltpreasfințitului Părinte <span class="hierarch-highlight">ANDREI</span>, Arhiepiscopul Vadului, Feleacului și Clujului și Mitropolitul Clujului, Maramureșului și Sălajului</em>.</p><div class="hero-actions"><a class="btn btn-dark" href="#proiect">Explorează proiectul <span aria-hidden="true">↗</span></a><button class="btn" id="heroPresentation">Prezentare congres <span aria-hidden="true">↗</span></button></div></div></div><div class="hero-scroll"><span>DERULEAZĂ PENTRU A EXPLORA</span><span>↓</span></div></section>
