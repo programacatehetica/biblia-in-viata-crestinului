@@ -217,6 +217,11 @@ html{scroll-behavior:smooth}body{background:var(--cream);color:var(--ink);font-f
 /* Antet eparhial cu lizibilitate sporită */
 #acasa .hero-overline .archdiocese-name{font-size:clamp(12px,1.35vw,17px);font-weight:700;letter-spacing:.115em;line-height:1.65}
 @media(max-width:650px){#acasa .hero-overline .archdiocese-name{font-size:clamp(12px,3.15vw,15px);letter-spacing:.055em}}
+
+/* Controale interactive accesibile și deasupra ornamentelor */
+#topics .topic>button{position:relative;z-index:2;cursor:pointer;touch-action:manipulation;pointer-events:auto}
+#proiect .vision-disclosure summary{position:relative;z-index:2;cursor:pointer;touch-action:manipulation}
+.nav a,.hero-actions a,.initiative-card{position:relative;z-index:2;pointer-events:auto;touch-action:manipulation}
 </style></head><body>
 <header class="top"><a class="brand" href="#acasa"><span aria-hidden="true" class="brandmark">✦</span><span class="brandname">Arhiepiscopia Vadului,<br/>Feleacului și Clujului</span></a><nav class="nav"><a href="#proiect">Proiectul</a><a href="#obiective">Obiective</a><a href="#metodologie">Metodologie</a><a href="#tematica">Tematică</a><a href="#resurse">Resurse</a><a href="#extindere">Perspective</a><a href="#initiative">Inițiative catehetice</a></nav></header>
 <main><section class="hero" id="acasa"><div class="hero-shell"><div class="hero-copy"><div class="hero-overline"><span class="archdiocese-crest"><img src="https://ro.wikipedia.org/wiki/Special:FilePath/Stema_Arhiepiscopiei_Clujului.gif" alt="Stema Arhiepiscopiei Vadului, Feleacului și Clujului"></span><span class="archdiocese-name">ARHIEPISCOPIA VADULUI, FELEACULUI ȘI CLUJULUI</span></div><h1>Biblia <em>în viața</em> creștinului <i>de azi</i></h1><div class="hero-credit" aria-label="Coordonarea proiectului"><div class="hero-credit-row"><span class="hero-credit-label">Inițiator și coordonator științific:</span> <strong>Pr. Prof. Univ. Dr. Stelian Tofană</strong></div><div class="hero-credit-row"><span class="hero-credit-label">Coordonare organizatorică:</span> <strong>Pr. Dr. Raul Pap – inspector eparhial</strong></div></div><div class="hero-bottom"><p class="hero-statement">Program biblic-catehetic desfășurat cu binecuvântarea <em>Înaltpreasfințitului Părinte <span class="hierarch-highlight">ANDREI</span>, Arhiepiscopul Vadului, Feleacului și Clujului și Mitropolitul Clujului, Maramureșului și Sălajului</em>.</p><div class="hero-actions"><a class="btn btn-dark" href="#proiect">Explorează proiectul <span aria-hidden="true">↗</span></a></div></div></div><div class="hero-scroll"><span>DERULEAZĂ PENTRU A EXPLORA</span><span>↓</span></div></section>
@@ -232,7 +237,17 @@ html{scroll-behavior:smooth}body{background:var(--cream);color:var(--ink);font-f
 <script>
 (function(){
 "use strict";
-document.querySelectorAll("#topics .topic > button").forEach(button=>{button.type="button";button.addEventListener("click",()=>{const topic=button.closest(".topic");const isOpen=topic.classList.toggle("open");button.setAttribute("aria-expanded",String(isOpen));const marker=button.querySelector("span:last-child");if(marker)marker.textContent=isOpen?"−":"+";});});
+document.querySelectorAll("#topics .topic > button").forEach(button=>{button.type="button";});
+document.addEventListener("click",function(event){
+ const button=event.target.closest("#topics .topic > button");
+ if(!button)return;
+ const topic=button.closest(".topic");
+ if(!topic)return;
+ const isOpen=topic.classList.toggle("open");
+ button.setAttribute("aria-expanded",String(isOpen));
+ const marker=button.querySelector("span:last-child");
+ if(marker)marker.textContent=isOpen?"−":"+";
+});
 
 })();
 </script></body></html>
