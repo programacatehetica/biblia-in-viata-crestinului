@@ -235,6 +235,18 @@ html{scroll-behavior:smooth}body{background:var(--cream);color:var(--ink);font-f
 #topics .topic>button{position:relative;z-index:2;cursor:pointer;touch-action:manipulation;pointer-events:auto}
 #proiect .vision-disclosure summary{position:relative;z-index:2;cursor:pointer;touch-action:manipulation}
 .nav a,.hero-actions a,.initiative-card{position:relative;z-index:2;pointer-events:auto;touch-action:manipulation}
+
+/* Metodologie — rafinament editorial al celor cinci panouri */
+#metodologie .steps{gap:22px;align-items:stretch}
+#metodologie .step{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;min-height:255px;padding:34px 34px 32px;background:#edf1ec;border:1px solid #d5dfd5;border-top:3px solid #819386;border-radius:5px;box-shadow:0 9px 25px rgba(22,43,39,.045);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+#metodologie .step:hover{transform:translateY(-3px);box-shadow:0 15px 32px rgba(22,43,39,.09);border-color:#b6c6b9}
+#metodologie .step .num{display:inline-flex;align-items:center;gap:13px;font-family:var(--serif);font-size:17px;line-height:1;color:#748b7c;letter-spacing:.04em}
+#metodologie .step .num:after{content:"";display:block;width:35px;height:1px;background:#b4a17c}
+#metodologie .step strong{margin:24px 0 13px;font-family:var(--serif);font-size:clamp(21px,1.8vw,25px);line-height:1.23;font-weight:600;letter-spacing:-.02em;color:#243b36}
+#metodologie .step p{margin:0;color:#4e5d58;font-size:14px;line-height:1.8}
+@media(max-width:850px){#metodologie .steps{gap:16px}#metodologie .step{min-height:0;padding:29px}}
+@media(max-width:560px){#metodologie .step{padding:27px 25px}#metodologie .step strong{margin-top:19px;font-size:23px}}
+@media(prefers-reduced-motion:reduce){#metodologie .step{transition:none}#metodologie .step:hover{transform:none}}
 </style></head><body>
 <header class="top"><a class="brand" href="#acasa"><span aria-hidden="true" class="brandmark">✦</span><span class="brandname">Arhiepiscopia Vadului,<br/>Feleacului și Clujului</span></a><nav class="nav"><a href="#proiect">Proiectul</a><a href="#obiective">Obiective</a><a href="#metodologie">Metodologie</a><a href="#tematica">Tematică</a><a href="#resurse">Resurse</a><a href="#extindere">Perspective</a><a href="#initiative">Inițiative catehetice</a></nav></header>
 <main><section class="hero" id="acasa"><div class="hero-shell"><div class="hero-copy"><div class="hero-overline"><span class="archdiocese-crest"><img src="https://ro.wikipedia.org/wiki/Special:FilePath/Stema_Arhiepiscopiei_Clujului.gif" alt="Stema Arhiepiscopiei Vadului, Feleacului și Clujului"></span><span class="archdiocese-name">ARHIEPISCOPIA VADULUI, FELEACULUI ȘI CLUJULUI</span></div><h1>Biblia <em>în viața</em> creștinului <i>de azi</i></h1><div class="hero-credit" aria-label="Coordonarea proiectului"><div class="hero-credit-row"><span class="hero-credit-label">Inițiator și coordonator științific:</span> <strong>Pr. Prof. Univ. Dr. Stelian Tofană</strong></div><div class="hero-credit-row"><span class="hero-credit-label">Coordonare organizatorică:</span> <strong>Pr. Dr. Raul Pap – inspector eparhial</strong></div></div><div class="hero-bottom"><p class="hero-statement"><em>Cu binecuvântarea</em><br><strong>Înaltpreasfințitului Părinte <span class="hierarch-highlight">ANDREI</span></strong><br><em>Arhiepiscopul Vadului, Feleacului și Clujului și Mitropolitul Clujului, Maramureșului și Sălajului</em></p><div class="hero-actions"><a class="btn btn-dark" href="#proiect">Explorează proiectul <span aria-hidden="true">↗</span></a></div></div></div><div class="hero-scroll"><span>DERULEAZĂ PENTRU A EXPLORA</span><span>↓</span></div></section>
