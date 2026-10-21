@@ -77,6 +77,9 @@
 /* Separare aerisită între coordonarea organizatorică și binecuvântare */
 #acasa .hero-credit{margin-bottom:clamp(64px,7vw,108px)!important}
 @media(max-width:650px){#acasa .hero-credit{margin-bottom:68px!important}}
+
+/* Metodologie: ultimele două repere centrate, aliniate pe același rând */
+@media(min-width:851px){#metodologie .steps{grid-template-columns:repeat(12,minmax(0,1fr))}#metodologie .step{grid-column:span 3}#metodologie .step:nth-child(5){grid-column:4 / span 3}#metodologie .step:nth-child(6){grid-column:7 / span 3}}
 </style><style>
 /* REIMAGINED DESIGN — Editorial / academic / congress */
 :root{--navy:#172b35;--navy2:#10212b;--gold:#9d7b4c;--cream:#f3f0e8;--ink:#202d30;--muted:#69706e;--line:#dcd6c9;--serif:'Iowan Old Style','Baskerville','Palatino Linotype',Georgia,serif}
